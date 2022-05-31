@@ -51,6 +51,13 @@ export class AppComponent implements OnInit {
       })
   }
 
+  editOrder(row: any) {
+    this.dialog.open(OrderDialogComponent, {
+      width: '30%',
+      data: row
+    })
+  }
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
