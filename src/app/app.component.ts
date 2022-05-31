@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { OrderDialogComponent } from './order-dialog/order-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'order-management-system';
+
+  constructor(private dialog: MatDialog) { }
+
+  openOrderDialog() {
+    this.dialog.open(OrderDialogComponent, { width: '30%' });
+  }
 }
