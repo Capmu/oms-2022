@@ -1,3 +1,24 @@
 {
-  "order": []
+  "order": [
+    {
+      "trackingNumber": "cc-001",
+      "receiver": "John",
+      "pickupDate": "2022-05-30T17:00:00.000Z",
+      "address": "Bangkok",
+      "paymentType": "Transfer",
+      "price": 100,
+      "trackingStatus": "Picked up",
+      "id": 1
+    },
+    {
+      "trackingNumber": "cc-002",
+      "receiver": "Mark",
+      "pickupDate": "2022-05-29T17:00:00.000Z",
+      "address": "Bangkok",
+      "paymentType": "COD",
+      "price": 1,
+      "trackingStatus": "On delivery",
+      "id": 2
+    }
+  ]
 }
