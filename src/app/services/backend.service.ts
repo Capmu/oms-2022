@@ -11,4 +11,8 @@ export class BackendService {
   postOrder(data: any) {
     return this.http.post<any>('http://localhost:3000/order', data)
   }
+
+  getOrder() {
+    return this.http.get<any>('http://localhost:3000/order')
+  }
 }
