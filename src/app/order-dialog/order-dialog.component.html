@@ -1,44 +1,61 @@
-<mat-form-field appearance="outline">
-  <mat-label>Tracking Number</mat-label>
-  <input matInput placeholder="ex. cc-001" />
-</mat-form-field>
+<h1>Add order form</h1>
+<form [formGroup]="orderForm">as
+  <mat-form-field appearance="outline">
+    <mat-label>Tracking Number</mat-label>
+    <input formControlName="trackingNumber" matInput placeholder="ex. cc-001" />
+  </mat-form-field>
 
-<mat-form-field appearance="outline">
-  <mat-label>Receiver</mat-label>
-  <input matInput placeholder="ex. John" />
-</mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Receiver</mat-label>
+    <input formControlName="receiver" matInput placeholder="ex. John" />
+  </mat-form-field>
 
-<mat-form-field appearance="outline">
-  <mat-label>Pick up date</mat-label>
-  <input matInput [matDatepicker]="picker" placeholder="ex. 5/31/2022" />
-  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
-</mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Pick up date</mat-label>
+    <input
+      formControlName="pickupDate"
+      matInput
+      [matDatepicker]="picker"
+      placeholder="ex. 5/31/2022"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
 
-<mat-form-field appearance="outline">
-  <mat-label>Address</mat-label>
-  <input matInput placeholder="ex. Bangkok" />
-</mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Address</mat-label>
+    <input formControlName="address" matInput placeholder="ex. Bangkok" />
+  </mat-form-field>
 
-<h3>Payment Type</h3>
-<mat-radio-group class="example-radio-group">
-  <mat-radio-button value="Transfer">Transfer</mat-radio-button>
-  <mat-radio-button value="COD">COD</mat-radio-button>
-</mat-radio-group>
+  <h3>Payment Type</h3>
+  <mat-radio-group formControlName="paymentType" class="example-radio-group">
+    <mat-radio-button value="Transfer">Transfer</mat-radio-button>
+    <mat-radio-button value="COD">COD</mat-radio-button>
+  </mat-radio-group>
 
-<mat-form-field appearance="outline">
-  <mat-label>Price</mat-label>
-  <input type="number" matInput placeholder="ex. 1500" />
-</mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Price</mat-label>
+    <input
+      formControlName="price"
+      type="number"
+      matInput
+      placeholder="ex. 1500"
+    />
+  </mat-form-field>
 
-<mat-form-field appearance="outline">
-  <mat-label>Tracking Status</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let ELEMENT of displayColums" [value]="ELEMENT">
-      {{ ELEMENT }}
-    </mat-option>
-    <!-- <mat-option value="Picked up">Picked up</mat-option>
-    <mat-option value="On delivery">On delivery</mat-option>
-    <mat-option value="Received">Received</mat-option> -->
-  </mat-select>
-</mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Tracking Status</mat-label>
+    <mat-select formControlName="trackingStatus">
+      <mat-option *ngFor="let ELEMENT of displayColums" [value]="ELEMENT">
+        {{ ELEMENT }}
+      </mat-option>
+      <!-- <mat-option value="Picked up">Picked up</mat-option>
+          <mat-option value="On delivery">On delivery</mat-option>
+          <mat-option value="Received">Received</mat-option> -->
+    </mat-select>
+  </mat-form-field>
+</form>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-stroked-button color="primary" mat-dialog-close>Close</button>
+  <button mat-raised-button color="primary" (click)="createOrder()">Save</button>
+</div>
