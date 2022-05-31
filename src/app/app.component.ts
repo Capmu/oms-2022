@@ -21,7 +21,8 @@ export class AppComponent implements OnInit {
     'address',
     'paymentType',
     'price',
-    'trackingStatus'
+    'trackingStatus',
+    'management'
   ];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
