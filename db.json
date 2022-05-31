@@ -2,33 +2,23 @@
   "order": [
     {
       "trackingNumber": "cc-001",
-      "receiver": "John",
-      "pickupDate": "2022-05-30T17:00:00.000Z",
-      "address": "Phuket",
+      "receiver": "Capmu",
+      "pickupDate": "2022-05-06T17:00:00.000Z",
+      "address": "Bangkok",
       "paymentType": "Transfer",
-      "price": 100,
-      "trackingStatus": "Picked up",
+      "price": 1,
+      "trackingStatus": "On delivery",
       "id": 1
     },
     {
-      "trackingNumber": "cc-002",
-      "receiver": "Mark",
-      "pickupDate": "2022-05-29T17:00:00.000Z",
-      "address": "Bangkok",
+      "trackingNumber": "21312312",
+      "receiver": "eweqweqw",
+      "pickupDate": "2022-05-06T17:00:00.000Z",
+      "address": "eqweqweqwe",
       "paymentType": "COD",
-      "price": 1,
-      "trackingStatus": "On delivery",
+      "price": 15,
+      "trackingStatus": "Picked up",
       "id": 2
-    },
-    {
-      "trackingNumber": "cc-003",
-      "receiver": "1234",
-      "pickupDate": "2022-05-04T17:00:00.000Z",
-      "address": "abc",
-      "paymentType": "COD",
-      "price": 1,
-      "trackingStatus": "Payment Success",
-      "id": 3
     }
   ]
 }
