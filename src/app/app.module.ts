@@ -17,6 +17,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatRadioModule,
     MatSelectModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
