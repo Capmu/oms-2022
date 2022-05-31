@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderDialogComponent implements OnInit {
 
+  displayColums = ['Picked up', 'On delivery', 'Recevied', 'Payment Success']
+
   constructor() { }
 
   ngOnInit(): void {
